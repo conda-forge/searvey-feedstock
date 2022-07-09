@@ -1,6 +1,5 @@
 {% set name = "searvey" %}
-{% set version = "0.1" %}
-{% set build = 0 %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +7,14 @@ package:
 
 source:
   url: https://github.com/oceanmodeling/searvey/archive/v{{ version }}.tar.gz
-  sha256: 293bae61773fd95b373df2909540cb3ce30f97526eab6c0694181dcd4b53464b
+  sha256: fe91b5cc9f43cdf412cdc2f5d6f748ed271c06120bcb27d03803c7c0019e4a52
 
 build:
   noarch: python
   script_env:
     - __version__={{ version }}
   script: {{ PYTHON }} -m pip install . -vv
-  number: {{ build }}
+  number: 0
 
 requirements:
   host:
@@ -35,10 +34,14 @@ requirements:
     - tqdm
     - limits
     - pydantic
+    - html5lib
+    - lxml
 
 test:
   imports:
     - searvey
+    - searvey.coops
+    - searvey.ioc
   requires:
      - pytest
 
@@ -48,7 +51,6 @@ about:
   license_file: LICENSE
   summary: 'Sea state observational data retrieval'
 
-  # The remaining entries in this section are optional, but recommended.
   description: |
     Searvey aims to provide near real time observational data related to sea state.
     Data analysis/clean up to facilitate comparison with numerical models.
