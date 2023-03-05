@@ -21,9 +21,11 @@ requirements:
     - pip
     - python >=3.8
     - poetry-core >=1.0.0
+    - poetry-dynamic-versioning
   run:
     - python >=3.8
     - beautifulsoup4
+    - dataretrieval
     - erddapy
     - geopandas
     - html5lib
@@ -43,7 +45,9 @@ test:
     - searvey
     - searvey.coops
     - searvey.ioc
+    - searvey.usgs
   requires:
+    - pip
     - pytest
 
 about:
