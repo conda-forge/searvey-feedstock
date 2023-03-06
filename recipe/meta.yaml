@@ -1,5 +1,5 @@
 {% set name = "searvey" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanmodeling/searvey/archive/v{{ version }}.tar.gz
-  sha256: ac3318ea4c6e8a52e52f1c34409ad1ed1ee4c4a5b6eb29baaceaebe9acb127c6
+  sha256: 5644dbab8d8a897c05f12b34973c267103339800d25842cf99a31a8a0456b9fd
 
 build:
   noarch: python
@@ -21,9 +21,11 @@ requirements:
     - pip
     - python >=3.8
     - poetry-core >=1.0.0
+    - poetry-dynamic-versioning
   run:
     - python >=3.8
     - beautifulsoup4
+    - dataretrieval
     - erddapy
     - geopandas
     - html5lib
@@ -43,7 +45,9 @@ test:
     - searvey
     - searvey.coops
     - searvey.ioc
+    - searvey.usgs
   requires:
+    - pip
     - pytest
 
 about:
