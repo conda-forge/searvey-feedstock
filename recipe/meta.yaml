@@ -37,7 +37,7 @@ requirements:
     - requests
     - shapely
     - tqdm
-    - typepigeon
+    - typing_extensions
     - xarray
 
 test:
