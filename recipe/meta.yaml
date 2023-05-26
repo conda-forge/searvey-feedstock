@@ -14,7 +14,7 @@ build:
   script_env:
     - __version__={{ version }}
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -50,10 +50,10 @@ test:
     - searvey.ioc
     - searvey.usgs
   commands:
-    - "python -c 'import searvey.coops; searvey.coops.get_coops_stations()'"
-    - "python -c 'import searvey.ioc; searvey.ioc.get_ioc_stations()'"
-    - "python -c 'import searvey.usgs; searvey.usgs.get_usgs_stations()'"
-    - "python -c 'import searvey.stations; searvey.stations.get_stations()'"
+    - python -c 'import searvey.coops; searvey.coops.get_coops_stations()'
+    - python -c 'import searvey.ioc; searvey.ioc.get_ioc_stations()'
+    - python -c 'import searvey.usgs; searvey.usgs.get_usgs_stations()'
+    - python -c 'import searvey.stations; searvey.stations.get_stations()'
 
 about:
   home: https://github.com/oceanmodeling/searvey
