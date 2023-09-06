@@ -1,5 +1,5 @@
 {% set name = "searvey" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanmodeling/searvey/archive/v{{ version }}.tar.gz
-  sha256: 07ec1342a2573a98e392b92fc639961420b8f933249292a1ab7147c6d5faf5c2
+  sha256: c2ebe6c91e2ab3551be8c2d78199946a728b0a8302a0414449c8049cdfebac02
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
   host:
     - pip
     - python >=3.8
-    - poetry-core >=1.0.0
+    - poetry-core <=1.6.0
     - poetry-dynamic-versioning
   run:
     - python >=3.8
