@@ -31,6 +31,7 @@ requirements:
     - html5lib
     - limits
     - lxml
+    - multifutures
     - numpy
     - pandas
     - pydantic
