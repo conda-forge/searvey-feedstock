@@ -26,9 +26,11 @@ requirements:
     - python >=3.8
     - beautifulsoup4
     - dataretrieval >=1.0.0
+    - deprecated
     - erddapy
     - geopandas
     - html5lib
+    - httpx
     - limits
     - lxml
     - multifutures
@@ -37,6 +39,7 @@ requirements:
     - pydantic
     - requests
     - shapely
+    - tenacity
     - tqdm
     - typing_extensions
     - xarray
