@@ -14,16 +14,16 @@ build:
   script_env:
     - __version__={{ version }}
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - poetry-core <=1.6.0
     - poetry-dynamic-versioning
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - beautifulsoup4
     - dataretrieval >=1.0.0
     - deprecated
@@ -48,6 +48,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   imports:
     - searvey
     - searvey.coops
