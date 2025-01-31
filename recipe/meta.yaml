@@ -34,6 +34,7 @@ requirements:
     - limits
     - lxml
     - multifutures
+    - ndbc-api
     - numpy
     - pandas
     - pydantic
@@ -58,6 +59,8 @@ test:
     - python -c 'import searvey.coops; searvey.coops.get_coops_stations()'
     - python -c 'import searvey.ioc; searvey.ioc.get_ioc_stations()'
     - python -c 'import searvey.usgs; searvey.usgs.get_usgs_stations()'
+    - python -c 'import searvey._ndbc_api; searvey._ndbc_api.get_ndbc_stations()'
+    - python -c 'import searvey._chs_api; searvey._chs_api.get_chs_stations()'
     - python -c 'import searvey.stations; searvey.stations.get_stations()'
 
 about:
