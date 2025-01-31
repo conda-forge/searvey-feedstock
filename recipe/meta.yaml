@@ -34,7 +34,7 @@ requirements:
     - limits
     - lxml
     - multifutures
-    - ndbc-api
+    - ndbc-api <=0.24.6.12.1
     - numpy
     - pandas
     - pydantic
