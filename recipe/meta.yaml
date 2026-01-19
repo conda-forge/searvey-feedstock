@@ -1,5 +1,5 @@
 {% set name = "searvey" %}
-{% set version = "0.3.16" %}
+{% set version = "0.3.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/oceanmodeling/searvey/archive/v{{ version }}.tar.gz
-  sha256: a74ad16b7a689d4e33b598e268fb21e9b318b4b8c77a2d1939c2040053cc1780
+  sha256: 4bad8efdfdbe5f16374b58784f320bc8e468bb3aa622da3ef0d63a4f119b3151
 
 build:
   noarch: python
